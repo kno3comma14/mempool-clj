@@ -32,3 +32,9 @@
      (case encoding-type
        :string (to-string-body response)
        :integer (to-int-body response)))))
+
+(defn execute-post-request
+  [endpoint data]
+  (let [complete-url (str root-domain api-prefix endpoint)
+        response (http/post complete-url {:body data})]
+    response))

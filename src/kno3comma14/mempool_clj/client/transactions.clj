@@ -41,7 +41,12 @@
   (let [complete-url (str "/" "tx" "/" txid "/" "status")]
     (util/execute-get-request complete-url)))
 
-;; POST TRANSACTION PENDING
+(defn create-transaction
+  [hash] ;; This is returning me a 400 error. Still figure out how to test it in a good way
+  (let [complete-url (str "/" "tx")]
+    (util/execute-post-request complete-url hash)))
+
+
 
 
 
