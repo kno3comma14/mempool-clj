@@ -6,7 +6,6 @@
 (def root-domain "https://mempool.space")
 (def api-prefix "/api")
 
-
 (defn- to-clojure-map
   [response]
   (let [body (:body response)]
